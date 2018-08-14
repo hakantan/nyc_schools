@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<p>This will be a list of schools</p>
+	<ul>
+		{% for school in schools %} <!--- for loop in ninja --->
+	  	 <li><a href="/schools/{{ school.dbn }}">{{ school.school_name }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}
